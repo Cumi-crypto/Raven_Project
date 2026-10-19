@@ -1,0 +1,30 @@
+# Secrets
+.env
+.env.*
+!.env.example
+**/config.properties
+
+# Java build output
+**/target/
+*.class
+
+# Node.js dependencies
+**/node_modules/
+
+# Logs and temporary files
+*.log
+.DS_Store
+Thumbs.db# Secrets and local configuration
+.env
+.env.*
+!.env.example
+**/config.properties
+
+# Java build output
+**/target/
+*.class
+
+# Logs and temporary files
+*.log
+.DS_Store
+Thumbs.db

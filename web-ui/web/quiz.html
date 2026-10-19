@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lexify Kuis — Uji kosa kata Bahasa Inggris-Indonesia">
+  <title>Lexify — Kuis</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<canvas id="particles-canvas"></canvas>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html" class="nav-brand">
+    <img src="assets/raven.png" alt="Lexify"> Lexify
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">🏠 Home</a></li>
+    <li><a href="dictionary.html">📖 Dictionary</a></li>
+    <li><a href="quiz.html">🎯 Quiz</a></li>
+    <li><a href="profile.html">👤 Profile</a></li>
+  </ul>
+  <div class="nav-stats">
+    <div class="nav-stat">🔥 <span class="streak-display">0</span></div>
+    <div class="nav-stat">⭐ <span class="xp-display">0</span></div>
+  </div>
+</nav>
+
+<!-- QUIZ PROGRESS BAR -->
+<div class="quiz-progress-bar">
+  <div class="quiz-progress-fill" id="quiz-progress-fill" style="width:0%"></div>
+</div>
+
+<!-- MAIN -->
+<div class="main-content">
+  <div class="container">
+
+    <!-- START SCREEN -->
+    <div id="start-screen" style="text-align:center;padding-top:40px;">
+      <div class="animate-in">
+        <img src="assets/raven.png" alt="Lexify Raven" class="hero-mascot" style="width:140px;height:140px;">
+        <h1 style="font-size:2rem;margin-top:16px;">🎯 Tantangan Kuis</h1>
+        <p style="color:var(--text-secondary);margin-top:8px;max-width:400px;margin-left:auto;margin-right:auto;">
+          Uji kosa katamu! Jawab <strong style="color:var(--text-primary);">10 pertanyaan</strong> dengan benar untuk mendapat XP. Buat kombo untuk poin bonus. Kamu punya 3 nyawa — jangan habiskan!
+        </p>
+      </div>
+
+      <div class="card card-static animate-in animate-in-delay-1" style="max-width:400px;margin:24px auto;text-align:left;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+          <span style="font-size:1.5rem;">💡</span>
+          <div>
+            <div style="font-weight:700;">Pertanyaan Campuran</div>
+            <div style="color:var(--text-secondary);font-size:0.85rem;">Pilihan ganda & isi teks</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+          <span style="font-size:1.5rem;">🔄</span>
+          <div>
+            <div style="font-weight:700;">Dua Arah</div>
+            <div style="color:var(--text-secondary);font-size:0.85rem;">Inggris → Indonesia & Indonesia → Inggris</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <span style="font-size:1.5rem;">🔥</span>
+          <div>
+            <div style="font-weight:700;">Sistem Kombo</div>
+            <div style="color:var(--text-secondary);font-size:0.85rem;">Jawab berturut-turut untuk bonus XP</div>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-lg animate-in animate-in-delay-2" onclick="startQuiz()" style="margin-top:8px;">
+        Mulai Kuis 🚀
+      </button>
+    </div>
+
+    <!-- QUIZ AREA -->
+    <div id="quiz-area" style="display:none; padding-top:24px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">
+        <div class="hearts-container" id="hearts-display"></div>
+        <div style="display:flex; align-items:center; gap:16px;">
+          <div id="quiz-counter" style="font-weight:700;color:var(--text-secondary);">1 / 10</div>
+          <button class="btn btn-sm btn-outline" id="quiz-quit-btn" style="padding: 6px 12px; font-size: 0.8rem;">Keluar ❌</button>
+        </div>
+      </div>
+      <div class="card card-static quiz-card" id="question-card"></div>
+    </div>
+
+    <!-- END SCREEN -->
+    <div id="end-screen" style="display:none;padding-top:40px;">
+      <div class="card card-static end-screen animate-in" style="max-width:500px;margin:0 auto;padding:48px 32px;">
+        <canvas id="quiz-complete-canvas" style="width:100%; height:auto; max-height:200px; object-fit:contain; margin:0 auto 16px; display:block;"></canvas>
+        <h2 style="font-size:1.8rem;">Kuis Selesai!</h2>
+        <div class="end-stars" id="end-stars"></div>
+        <div class="end-score">
+          <span id="end-score-value">0</span> XP earned
+        </div>
+        <p id="end-combo" style="color:var(--accent-orange);font-weight:600;margin-top:8px;"></p>
+        <div style="display:flex;gap:12px;justify-content:center;margin-top:28px;flex-wrap:wrap;">
+          <button class="btn btn-primary btn-lg" onclick="location.reload()">Coba Lagi 🔄</button>
+          <a href="index.html" class="btn btn-outline btn-lg">Beranda 🏠</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FEEDBACK BAR -->
+<div class="feedback-bar" id="feedback-bar"></div>
+
+<script src="js/app.js"></script>
+<script src="js/quiz.js"></script>
+
+</body>
+</html>

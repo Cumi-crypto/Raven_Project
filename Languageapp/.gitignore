@@ -1,0 +1,32 @@
+# Git ignore for Lexify
+# ========================
+
+# API Keys & Secrets - NEVER commit these!
+config.properties
+*.env
+.env
+
+# User database (separate from vocabulary)
+lexify.db
+
+# NetBeans project files
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# Build output
+target/
+
+# IDE files
+*.class
+*.jar
+.idea/
+*.iml
+
+# OS files
+Thumbs.db
+Desktop.ini
+This PC - Shortcut.lnk
+*.lnk

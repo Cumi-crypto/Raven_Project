@@ -1,0 +1,904 @@
+PROJECT NAME: LEXIFY LANGUAGE LEARNING PLATFORM
+
+==================================================
+
+1. OVERVIEW
+   ==================================================
+
+Lexify adalah platform pembelajaran bahasa berbasis web yang menggabungkan kamus digital, latihan kosakata, quiz interaktif, typing challenge, sistem gamifikasi, Artificial Intelligence (AI) Assistant, serta Blockchain Verification untuk meningkatkan efektivitas dan keterlibatan pengguna dalam proses belajar bahasa.
+
+Berbeda dengan aplikasi kamus konvensional, Lexify tidak hanya menyediakan arti kata, tetapi juga membangun pengalaman belajar yang terstruktur melalui pendekatan:
+
+Learn → Practice → Challenge → Reward → Repeat
+
+Melalui pendekatan ini, pengguna dapat mempelajari kosakata baru, melatih pemahaman bahasa, meningkatkan kemampuan mengetik, serta memperoleh motivasi belajar melalui sistem XP, level, streak, dan achievement.
+
+IMPLEMENTATION APPROACH
+
+* Object-Oriented Programming (OOP)
+* REST API Architecture
+* Relational Database
+* Gamification Framework
+* Artificial Intelligence Integration
+* Blockchain Trust Layer
+
+Tujuan utama Lexify adalah menciptakan ekosistem pembelajaran bahasa yang modern, interaktif, terukur, dan menyenangkan.
+
+==================================================
+2. UML DESIGN
+=============
+
+==================================================
+2.1 USE CASE DIAGRAM
+====================
+
+ACTORS
+
+1. Guest
+2. User
+3. Admin
+4. AI Assistant
+5. Blockchain Service
+
+---
+
+USE CASES
+
+Guest:
+
+* Register Account
+* Login
+
+User:
+
+* Search Vocabulary
+* View Word Meaning
+* Take Quiz
+* Start Typing Practice
+* View Profile
+* View Progress
+* Earn XP
+* Unlock Achievement
+* Ask AI Assistant
+
+Admin:
+
+* Manage Vocabulary
+* Manage Users
+* Manage Quiz Questions
+* View Reports
+
+AI Assistant:
+
+* Explain Word
+* Generate Example Sentence
+
+Blockchain Service:
+
+* Verify Achievement
+* Store Learning Proof
+
+---
+
+USE CASE RELATIONSHIP
+
+User
+│
+├── Search Vocabulary
+├── View Meaning
+├── Take Quiz
+├── Typing Practice
+├── Ask AI Assistant
+├── View Progress
+└── Unlock Achievement
+│
+▼
+Blockchain Verification
+
+==================================================
+2.2 ACTIVITY DIAGRAM
+====================
+
+LEARNING FLOW
+
+Start
+│
+▼
+Login
+│
+▼
+Search Word
+│
+▼
+Read Meaning
+│
+▼
+Take Quiz
+│
+▼
+Typing Practice
+│
+▼
+Calculate XP
+│
+▼
+Update Level
+│
+▼
+Unlock Achievement
+│
+▼
+Verify Achievement
+(Blockchain)
+│
+▼
+End
+
+==================================================
+2.3 SEQUENCE DIAGRAM
+====================
+
+QUIZ FLOW
+
+User
+│
+▼
+Web Interface
+│
+▼
+Quiz Service
+│
+▼
+Database
+
+User submits answer
+│
+▼
+Quiz Service validates answer
+│
+▼
+Database retrieves correct answer
+│
+▼
+Quiz Service calculates XP
+│
+▼
+Profile Service updates progress
+│
+▼
+Achievement Service checks reward
+│
+▼
+Blockchain Service verifies achievement
+
+==================================================
+2.4 CLASS DIAGRAM
+=================
+
+CLASS USER
+
+Attributes:
+
+* id
+* username
+* email
+* password
+* level
+* xp
+* streak
+
+Methods:
+
+* login()
+* register()
+* updateProfile()
+* viewProgress()
+
+---
+
+CLASS WORD
+
+Attributes:
+
+* id
+* englishWord
+* indonesianMeaning
+* exampleSentence
+
+Methods:
+
+* searchWord()
+* getMeaning()
+
+---
+
+CLASS DICTIONARY
+
+Attributes:
+
+* wordList
+* wordMap
+* prefixMap
+
+Methods:
+
+* addWord()
+* searchWord()
+* suggestWord()
+* loadData()
+
+---
+
+CLASS QUIZ
+
+Attributes:
+
+* question
+* answer
+* score
+
+Methods:
+
+* generateQuestion()
+* validateAnswer()
+* calculateScore()
+
+---
+
+CLASS TYPINGSESSION
+
+Attributes:
+
+* startTime
+* endTime
+* wpm
+* accuracy
+
+Methods:
+
+* startSession()
+* calculateWPM()
+* calculateAccuracy()
+
+---
+
+CLASS ACHIEVEMENT
+
+Attributes:
+
+* achievementId
+* title
+* description
+* xpReward
+
+Methods:
+
+* unlockAchievement()
+* verifyAchievement()
+
+---
+
+CLASS AIASSISTANT
+
+Methods:
+
+* askQuestion()
+* explainWord()
+* generateExample()
+
+---
+
+CLASS BLOCK
+
+Attributes:
+
+* data
+* timestamp
+* previousHash
+* hash
+
+Methods:
+
+* generateHash()
+
+---
+
+CLASS BLOCKCHAIN
+
+Attributes:
+
+* chain
+
+Methods:
+
+* addBlock()
+* verifyChain()
+
+---
+
+RELATIONSHIP
+
+User → Quiz
+
+User → TypingSession
+
+User → Achievement
+
+User → Progress
+
+Dictionary → Word
+
+Quiz → Word
+
+Blockchain → Block
+
+AI Assistant → Dictionary
+
+==================================================
+3. HIGH LEVEL DESIGN (HLD)
+==========================
+
+LEXIFY HLD ARCHITECTURE
+
+[USER]
+(Web Browser / Mobile Browser)
+│
+▼
+
++--------------------------------------+
+
+| WEB CLIENT                               |
+| ---------------------------------------- |
+| Home Page                                |
+| Dictionary                               |
+| Quiz Challenge                           |
+| Typing Practice                          |
+| Profile Dashboard                        |
+| +--------------------------------------+ |
+
+```
+       │
+       ▼
+```
+
++--------------------------------------+
+
+| REST API                                 |
+| ---------------------------------------- |
+| Authentication Service                   |
+| Dictionary Service                       |
+| Quiz Service                             |
+| Typing Service                           |
+| Progress Service                         |
+| Achievement Service                      |
+| AI Service                               |
+| +--------------------------------------+ |
+
+```
+       │
+       ▼
+```
+
++--------------------------------------+
+
+| BUSINESS LOGIC LAYER                     |
+| ---------------------------------------- |
+| Lexicon Engine                           |
+| Quiz Engine                              |
+| XP Engine                                |
+| Level Engine                             |
+| Streak Engine                            |
+| Achievement Engine                       |
+| AI Assistant Engine                      |
+| +--------------------------------------+ |
+
+```
+       │
+       ▼
+```
+
++--------------------------------------+
+
+| DATABASE LAYER                           |
+| ---------------------------------------- |
+| Users                                    |
+| Vocabulary                               |
+| Quiz History                             |
+| Typing History                           |
+| Progress                                 |
+| Achievements                             |
+| +--------------------------------------+ |
+
+```
+       │
+       ▼
+```
+
++--------------------------------------+
+
+| BLOCKCHAIN LAYER                         |
+| ---------------------------------------- |
+| Achievement Verification                 |
+| Learning Proof                           |
+| +--------------------------------------+ |
+
+==================================================
+4. LOW LEVEL DESIGN (LLD)
+=========================
+
+LEXIFY LLD ARCHITECTURE
+
+USER INTERFACE
+
+├── index.html
+├── dictionary.html
+├── quiz.html
+├── typing.html
+├── profile.html
+
+```
+    │
+    ▼
+```
+
+FRONTEND CONTROLLER
+
+├── AuthController
+├── DictionaryController
+├── QuizController
+├── TypingController
+├── ProfileController
+
+```
+    │
+    ▼
+```
+
+API SERVICE LAYER
+
+├── POST /register
+├── POST /login
+├── GET /dictionary/search
+├── GET /dictionary/suggestion
+├── GET /quiz/generate
+├── POST /quiz/submit
+├── POST /typing/submit
+├── GET /progress
+├── POST /ai/ask
+
+```
+    │
+    ▼
+```
+
+BUSINESS LOGIC
+
+├── UserManager
+├── DictionaryManager
+├── QuizManager
+├── TypingManager
+├── AchievementManager
+├── BlockchainManager
+├── AIManager
+
+```
+    │
+    ▼
+```
+
+DATA ACCESS LAYER
+
+├── UserRepository
+├── VocabularyRepository
+├── QuizRepository
+├── ProgressRepository
+├── AchievementRepository
+
+```
+    │
+    ▼
+```
+
+DATABASE
+
+├── users
+├── vocabulary
+├── quiz_history
+├── typing_history
+├── achievements
+└── progress
+
+==================================================
+5. DATABASE DESIGN
+==================
+
+TABLE USERS
+
+* id (PK)
+* username
+* email
+* password_hash
+* level
+* xp
+* streak
+
+---
+
+TABLE VOCABULARY
+
+* id (PK)
+* english_word
+* indonesian_meaning
+* example_sentence
+
+---
+
+TABLE QUIZ_HISTORY
+
+* id (PK)
+* user_id (FK)
+* score
+* timestamp
+
+---
+
+TABLE TYPING_HISTORY
+
+* id (PK)
+* user_id (FK)
+* wpm
+* accuracy
+* timestamp
+
+---
+
+TABLE ACHIEVEMENTS
+
+* id (PK)
+* user_id (FK)
+* achievement_name
+* reward_xp
+* timestamp
+
+---
+
+TABLE USER_PROGRESS
+
+* id (PK)
+* user_id (FK)
+* completed_quiz
+* learned_words
+* total_xp
+
+==================================================
+6. API DESIGN
+=============
+
+AUTHENTICATION
+
+POST /register
+
+POST /login
+
+POST /logout
+
+---
+
+DICTIONARY
+
+GET /dictionary/search?q=word
+
+GET /dictionary/{id}
+
+GET /dictionary/suggestion
+
+---
+
+QUIZ
+
+GET /quiz/generate
+
+POST /quiz/submit
+
+GET /quiz/history
+
+---
+
+TYPING
+
+GET /typing/start
+
+POST /typing/submit
+
+GET /typing/history
+
+---
+
+PROFILE
+
+GET /profile
+
+PUT /profile/update
+
+---
+
+PROGRESS
+
+GET /progress
+
+POST /progress/update
+
+---
+
+AI ASSISTANT
+
+POST /ai/ask
+
+POST /ai/explain
+
+==================================================
+7. DEPLOYMENT ARCHITECTURE
+==========================
+
+[CLIENT BROWSER]
+│
+▼
+
+[NGINX REVERSE PROXY]
+│
+▼
+
+[BACKEND APPLICATION]
+(Spring Boot / Node.js)
+│
+▼
+
+[DATABASE]
+(PostgreSQL / SQLite)
+
+---
+
+TECHNOLOGY STACK
+
+Frontend:
+
+* HTML
+* CSS
+* JavaScript
+
+Backend:
+
+* Spring Boot / Node.js
+
+Database:
+
+* PostgreSQL
+* SQLite
+
+Hosting:
+
+* Ubuntu VPS
+
+Reverse Proxy:
+
+* Nginx
+
+==================================================
+8. BUSINESS FLOW
+================
+
+USER JOURNEY
+
+1. User melakukan registrasi atau login
+
+2. User mencari kosakata baru
+
+3. Sistem menampilkan arti kata
+
+4. User mempelajari kosakata
+
+5. User mengerjakan quiz
+
+6. User melakukan typing challenge
+
+7. Sistem menghitung skor
+
+8. Sistem memberikan XP
+
+9. User naik level
+
+10. User memperoleh achievement
+
+11. Achievement diverifikasi melalui Blockchain Layer
+
+---
+
+CORE LEARNING LOOP
+
+Learn
+↓
+Practice
+↓
+Quiz
+↓
+Typing
+↓
+Reward
+↓
+Level Up
+↓
+Repeat
+
+==================================================
+9. GAMIFICATION SYSTEM
+======================
+
+XP SYSTEM
+
+* Menyelesaikan Quiz = 20 XP
+* Typing Challenge = 15 XP
+* Daily Login = 5 XP
+* Achievement Unlock = 50 XP
+
+---
+
+LEVEL SYSTEM
+
+Level 1 = 0 XP
+
+Level 2 = 100 XP
+
+Level 3 = 250 XP
+
+Level 4 = 500 XP
+
+Level 5 = 1000 XP
+
+---
+
+STREAK SYSTEM
+
+Sistem mencatat aktivitas belajar harian pengguna.
+
+---
+
+ACHIEVEMENT SYSTEM
+
+* First Quiz Completed
+* 7 Day Streak
+* Vocabulary Explorer
+* Quiz Master
+* Typing Expert
+
+==================================================
+10. AI INTEGRATION
+==================
+
+ROLE OF AI
+
+Artificial Intelligence digunakan sebagai Learning Assistant.
+
+Fungsi:
+
+* Menjelaskan arti kata
+* Memberikan contoh penggunaan
+* Menjawab pertanyaan bahasa
+* Memberikan rekomendasi belajar
+* Membantu memahami konteks kata
+
+==================================================
+11. BLOCKCHAIN INTEGRATION
+==========================
+
+PRINCIPLE
+
+Blockchain digunakan sebagai Trust Layer.
+
+Blockchain bukan database utama sistem.
+
+---
+
+FUNCTIONS
+
+1. Achievement Verification
+
+2. Learning Proof
+
+3. Immutable Record
+
+---
+
+IMPLEMENTATION FLOW
+
+User menyelesaikan challenge
+│
+▼
+Backend melakukan validasi
+│
+▼
+Data disimpan ke database
+│
+▼
+Achievement dikirim ke blockchain
+│
+▼
+Hash tersimpan permanen
+
+---
+
+ON-CHAIN DATA
+
+* User ID
+* Achievement ID
+* Timestamp
+* Hash
+
+==================================================
+12. DEVELOPMENT ROADMAP
+=======================
+
+PHASE 1 (MVP)
+
+* Authentication
+* Dictionary
+* Vocabulary Search
+* Database
+
+---
+
+PHASE 2
+
+* Quiz System
+* XP System
+* User Progress
+
+---
+
+PHASE 3
+
+* Level System
+* Streak System
+* Achievement System
+
+---
+
+PHASE 4
+
+* Typing Challenge
+* Dashboard Improvement
+
+---
+
+PHASE 5
+
+* AI Assistant Integration
+
+---
+
+PHASE 6
+
+* Blockchain Verification
+
+==================================================
+13. UNIQUE VALUE PROPOSITION
+============================
+
+1. Dictionary-Based Learning
+
+2. Interactive Learning
+
+3. Gamification System
+
+4. AI-Assisted Learning
+
+5. Blockchain Verification
+
+==================================================
+14. FINAL POSITIONING
+=====================
+
+Lexify adalah platform pembelajaran bahasa berbasis web yang mengintegrasikan kamus digital, latihan interaktif, gamifikasi, Artificial Intelligence, dan Blockchain Verification untuk menciptakan pengalaman belajar bahasa yang modern, menarik, dan terukur.
+
+KESIMPULAN AKHIR
+
+Lexify bukan sekadar aplikasi kamus digital, melainkan sebuah Language Learning Ecosystem yang menggabungkan pembelajaran kosakata, quiz interaktif, typing challenge, AI Assistant, gamifikasi, dan blockchain untuk membantu pengguna meningkatkan kemampuan bahasa secara efektif, terstruktur, dan berkelanjutan.

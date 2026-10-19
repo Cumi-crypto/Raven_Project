@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lexify Autentikasi — Masuk atau daftar dengan username dan kata sandi">
+  <title>Lexify — Masuk / Daftar</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<canvas id="particles-canvas"></canvas>
+
+<div class="login-container">
+  <div class="login-card">
+    
+    <!-- BRAND LOGO -->
+    <div class="login-brand">
+      <video src="assets/can_you_made_this_character_al.mp4" autoplay loop muted playsinline style="width: 160px; height: 160px; object-fit: cover; border-radius: 50%; box-shadow: var(--shadow-glow-orange); border: 3px solid var(--border-glass);"></video>
+      <h2 style="margin-top: 12px;">Lexify</h2>
+      <p>Kuasai Bahasa Inggris & Indonesia lewat bermain</p>
+    </div>
+
+    <!-- TABS -->
+    <div class="auth-tabs">
+      <button class="auth-tab active" id="tab-login">Masuk</button>
+      <button class="auth-tab" id="tab-register">Daftar</button>
+    </div>
+
+    <!-- LOG IN FORM -->
+    <div class="auth-step active" id="step-login">
+      <h3 style="font-size:1.3rem; margin-bottom:8px; font-weight:700;">Selamat Datang Kembali</h3>
+      <p style="color:var(--text-secondary); font-size:0.85rem; margin-bottom:24px;">Masuk untuk melanjutkan perjalanan belajarmu</p>
+      
+      <input type="text" class="input input-lg" id="login-username" placeholder="Username" autocomplete="username" style="margin-bottom:12px;">
+      <input type="password" class="input input-lg" id="login-password" placeholder="Kata Sandi" autocomplete="current-password" style="margin-bottom:8px;">
+      
+      <div style="text-align: right; margin-bottom: 24px;">
+        <a href="#" id="link-forgot-password" onclick="showStep('step-forgot-password'); return false;" style="color: var(--accent-orange); font-size: 0.85rem; text-decoration: none;">Lupa Password?</a>
+      </div>
+
+      <button class="btn btn-primary btn-block btn-lg" id="btn-login">Masuk 🚀</button>
+    </div>
+
+    <!-- FORGOT PASSWORD (EMAIL) -->
+    <div class="auth-step" id="step-forgot-password">
+      <h3 style="font-size:1.3rem; margin-bottom:8px; font-weight:700;">Lupa Password?</h3>
+      <p style="color:var(--text-secondary); font-size:0.85rem; margin-bottom:24px;">Masukkan email akun kamu, kami akan mengirimkan kode OTP.</p>
+      
+      <input type="email" class="input input-lg" id="forgot-email" placeholder="Email" autocomplete="email" required style="margin-bottom:24px;">
+      
+      <button class="btn btn-primary btn-block btn-lg" id="btn-forgot-send">Kirim OTP 📧</button>
+      <div style="text-align:center; margin-top:16px;">
+        <a href="#" onclick="showStep('step-login'); return false;" style="color:var(--text-secondary); font-size:0.85rem; text-decoration:none;">Kembali ke Masuk</a>
+      </div>
+    </div>
+
+    <!-- OTP VERIFICATION -->
+    <div class="auth-step" id="step-verify-otp">
+      <h3 style="font-size:1.3rem; margin-bottom:8px; font-weight:700;">Verifikasi OTP</h3>
+      <p style="color:var(--text-secondary); font-size:0.85rem; margin-bottom:24px;">Masukkan 6 digit kode yang dikirim ke email kamu.</p>
+      
+      <input type="text" class="input input-lg" id="verify-otp" placeholder="Kode OTP (6 digit)" required style="margin-bottom:24px; text-align:center; letter-spacing:4px; font-weight:bold;">
+      
+      <button class="btn btn-primary btn-block btn-lg" id="btn-verify-otp">Verifikasi OTP ✅</button>
+      <div style="text-align:center; margin-top:16px;">
+        <a href="#" onclick="showStep('step-login'); return false;" style="color:var(--text-secondary); font-size:0.85rem; text-decoration:none;">Batal</a>
+      </div>
+    </div>
+
+    <!-- RESET PASSWORD -->
+    <div class="auth-step" id="step-reset-password">
+      <h3 style="font-size:1.3rem; margin-bottom:8px; font-weight:700;">Password Baru</h3>
+      <p style="color:var(--text-secondary); font-size:0.85rem; margin-bottom:24px;">Buat password baru untuk akunmu.</p>
+      
+      <input type="password" class="input input-lg" id="reset-password" placeholder="Password Baru (min. 4 karakter)" required style="margin-bottom:24px;">
+      
+      <button class="btn btn-primary btn-block btn-lg" id="btn-reset-password">Simpan Password 🔒</button>
+    </div>
+
+    <!-- REGISTER FORM -->
+    <div class="auth-step" id="step-register">
+      <h3 style="font-size:1.3rem; margin-bottom:8px; font-weight:700;">Buat Akun</h3>
+      <p style="color:var(--text-secondary); font-size:0.85rem; margin-bottom:24px;">Bergabung dengan Lexify dan mulai kumpulkan XP!</p>
+      
+      <input type="text" class="input input-lg" id="reg-username" placeholder="Username (min. 3 karakter)" autocomplete="username" required style="margin-bottom:12px;">
+      <input type="email" class="input input-lg" id="reg-email" placeholder="Email (wajib)" autocomplete="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" style="margin-bottom:12px;">
+      <input type="password" class="input input-lg" id="reg-password" placeholder="Kata Sandi (min. 4 karakter)" autocomplete="new-password" required style="margin-bottom:12px;">
+      
+      <div style="display:flex; gap:12px; margin-bottom:12px;">
+        <select class="input input-lg" id="reg-province" required style="flex:1; background-color: var(--bg-card); color: var(--text-primary);" onchange="updateCities()">
+          <option value="">Select Province</option>
+          <option value="DKI Jakarta">DKI Jakarta</option>
+          <option value="Jawa Barat">Jawa Barat</option>
+          <option value="Jawa Tengah">Jawa Tengah</option>
+          <option value="Jawa Timur">Jawa Timur</option>
+          <option value="Banten">Banten</option>
+          <option value="Bali">Bali</option>
+        </select>
+        <select class="input input-lg" id="reg-city" required style="flex:1; background-color: var(--bg-card); color: var(--text-primary);" disabled>
+          <option value="">Select City</option>
+        </select>
+      </div>
+      <input type="text" class="input input-lg" id="reg-country" placeholder="Negara" value="Indonesia" style="margin-bottom:24px;">
+
+      <button class="btn btn-primary btn-block btn-lg" id="btn-register">Daftar 🎉</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+<script src="js/login.js"></script>
+
+<style>
+.auth-tabs {
+  display: flex;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--border-glass);
+}
+.auth-tab {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.auth-tab.active {
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--accent-orange);
+}
+.auth-tab:hover:not(.active) {
+  color: var(--text-primary);
+}
+</style>
+
+<script>
+  const locations = {
+    "DKI Jakarta": ["Jakarta Pusat", "Jakarta Utara", "Jakarta Barat", "Jakarta Selatan", "Jakarta Timur"],
+    "Jawa Barat": ["Bandung", "Bekasi", "Bogor", "Depok", "Cimahi", "Cirebon"],
+    "Jawa Tengah": ["Semarang", "Surakarta", "Magelang", "Pekalongan", "Tegal", "Salatiga"],
+    "Jawa Timur": ["Surabaya", "Malang", "Kediri", "Madiun", "Mojokerto", "Pasuruan"],
+    "Banten": ["Tangerang", "Tangerang Selatan", "Serang", "Cilegon"],
+    "Bali": ["Denpasar", "Singaraja", "Gianyar", "Tabanan"]
+  };
+
+  function updateCities() {
+    const provinceSelect = document.getElementById('reg-province');
+    const citySelect = document.getElementById('reg-city');
+    const province = provinceSelect.value;
+    
+    citySelect.innerHTML = '<option value="">Select City</option>';
+    
+    if (province && locations[province]) {
+      locations[province].forEach(city => {
+        const option = document.createElement('option');
+        option.value = city;
+        option.textContent = city;
+        citySelect.appendChild(option);
+      });
+      citySelect.disabled = false;
+    } else {
+      citySelect.disabled = true;
+    }
+  }
+</script>
+
+</body>
+</html>

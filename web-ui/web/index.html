@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lexify — Aplikasi belajar kamus bahasa Inggris-Indonesia dengan gamifikasi">
+  <title>Lexify — Beranda</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<canvas id="particles-canvas"></canvas>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html" class="nav-brand">
+    <img src="assets/raven.png" alt="Lexify Raven"> Lexify
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">🏠 Home</a></li>
+    <li><a href="dictionary.html">📖 Dictionary</a></li>
+    <li><a href="quiz.html">🎯 Quiz</a></li>
+    <li><a href="profile.html">👤 Profile</a></li>
+  </ul>
+  <div class="nav-stats">
+    <div class="nav-stat">🔥 <span class="streak-display">0</span></div>
+    <div class="nav-stat">⭐ <span class="xp-display">0</span></div>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<div class="main-content">
+  <div class="container">
+
+    <!-- HERO -->
+    <div class="hero animate-in">
+      <div class="hero-text">
+        <h1 id="greeting">Welcome to Lexify!</h1>
+        <p>Kuasai Bahasa Inggris & Indonesia lewat bermain. Cari kata, ikuti kuis, dan tingkatkan kemampuanmu!</p>
+        <div style="margin-top:24px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="dictionary.html" class="btn btn-primary btn-lg">📖 Belajar Kata</a>
+          <a href="quiz.html" class="btn btn-secondary btn-lg">🎯 Mulai Kuis</a>
+        </div>
+      </div>
+      <img src="assets/raven.png" alt="Lexify Raven Mascot" class="hero-mascot">
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-grid animate-in animate-in-delay-1" style="margin-top:16px;">
+      <div class="card card-static stat-card">
+        <div class="stat-icon">⭐</div>
+        <div class="stat-value xp-display">0</div>
+        <div class="stat-label">Total XP</div>
+      </div>
+      <div class="card card-static stat-card">
+        <div class="stat-icon">🏅</div>
+        <div class="stat-value level-display">1</div>
+        <div class="stat-label">Level</div>
+      </div>
+      <div class="card card-static stat-card">
+        <div class="stat-icon">🔥</div>
+        <div class="stat-value streak-display">0</div>
+        <div class="stat-label">Streak Harian</div>
+      </div>
+      <div class="card card-static stat-card">
+        <div class="stat-icon">📚</div>
+        <div class="stat-value" id="words-learned">0</div>
+        <div class="stat-label">Kata Dicari</div>
+      </div>
+    </div>
+
+    <!-- PROGRESS -->
+    <div class="card card-static animate-in animate-in-delay-2" style="margin-top:24px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+        <span class="section-title" style="margin:0;">📊 Kemajuan Level</span>
+        <span class="xp-progress-text" style="color:var(--text-secondary); font-size:0.9rem;">0 / 100 XP</span>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar glow xp-progress-bar" style="width:0%;"></div>
+      </div>
+    </div>
+
+    <!-- QUICK ACTIONS -->
+    <div class="actions-grid animate-in animate-in-delay-3">
+      <a href="dictionary.html" class="card action-card">
+        <div class="action-icon">📖</div>
+        <div class="action-title">Kamus</div>
+        <div class="action-desc">Cari & pelajari kata baru beserta terjemahan dan contohnya</div>
+      </a>
+      <a href="quiz.html" class="card action-card">
+        <div class="action-icon">🎯</div>
+        <div class="action-title">Tantangan Kuis</div>
+        <div class="action-desc">Uji pengetahuanmu dan dapatkan XP dengan tantangan beragam</div>
+      </a>
+      <a href="typing.html" class="card action-card">
+        <div class="action-icon">⌨️</div>
+        <div class="action-title">Latihan Mengetik</div>
+        <div class="action-desc">Tingkatkan kecepatan dan akurasi mengetikmu dengan kata-kata bahasa Inggris</div>
+      </a>
+    </div>
+
+    <!-- RECENT ACTIVITY -->
+    <div class="card card-static animate-in animate-in-delay-3" style="margin-top:24px;">
+      <div class="section-title">📝 Aktivitas Terbaru</div>
+      <div id="recent-activity">
+        <p style="color:var(--text-muted); font-size:0.9rem;">Belum ada aktivitas. Mulai belajar!</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<script src="js/app.js"></script>
+<script>
+  function onUsernameReady() { updateGreeting(); }
+
+  function updateGreeting() {
+    const name = UserManager.get();
+    const hour = new Date().getHours();
+    let greet = hour < 12 ? 'Selamat Pagi' : hour < 18 ? 'Selamat Siang' : 'Selamat Malam';
+    document.getElementById('greeting').textContent = name ? `${greet}, ${name}!` : 'Selamat Datang di Lexify!';
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    updateGreeting();
+    document.getElementById('words-learned').textContent = StatsManager.get('searches');
+
+    // Show recent activity (using SafeStorage and escapeHTML)
+    let activity = [];
+    try {
+      activity = JSON.parse(SafeStorage.getItem('recent_activity') || '[]');
+    } catch (e) {
+      activity = [];
+    }
+    const container = document.getElementById('recent-activity');
+    if (activity.length > 0) {
+      container.innerHTML = '<div class="timeline">' +
+        activity.slice(-6).reverse().map(a =>
+          `<div class="timeline-item"><div class="time">${escapeHTML(a.time)}</div><div class="event">${escapeHTML(a.event)}</div></div>`
+        ).join('') + '</div>';
+    }
+  });
+</script>
+
+</body>
+</html>

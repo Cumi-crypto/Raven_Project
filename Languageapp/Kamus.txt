@@ -1,0 +1,1264 @@
+ability,kemampuan
+able,mampu
+about,tentang
+above,di atas
+accept,menerima
+account,akun
+across,melintasi
+act,bertindak
+action,tindakan
+activity,aktivitas
+add,menambah
+address,alamat
+admit,mengakui
+adult,dewasa
+after,setelah
+again,lagi
+against,melawan
+age,usia
+ago,yang lalu
+agree,setuju
+air,udara
+all,semua
+allow,mengizinkan
+almost,hampir
+alone,sendiri
+along,sepanjang
+already,sudah
+also,juga
+always,selalu
+amount,jumlah
+animal,hewan
+another,yang lain
+answer,jawaban
+any,apa pun
+anyone,siapa pun
+anything,apa saja
+appear,muncul
+apply,menerapkan
+area,area
+argue,berdebat
+arm,lengan
+around,sekitar
+arrive,tiba
+art,seni
+ask,bertanya
+attack,serangan
+attention,perhatian
+author,penulis
+available,tersedia
+avoid,menghindari
+away,pergi
+baby,bayi
+back,kembali
+bad,buruk
+bag,tas
+ball,bola
+bank,bank
+base,dasar
+be,menjadi
+beat,mengalahkan
+beautiful,indah
+because,karena
+become,menjadi
+bed,tempat tidur
+before,sebelum
+begin,memulai
+behind,di belakang
+believe,percaya
+best,terbaik
+better,lebih baik
+between,antara
+big,besar
+bill,tagihan
+black,hitam
+blood,darah
+blue,biru
+board,papan
+body,tubuh
+book,buku
+born,lahir
+both,keduanya
+box,kotak
+boy,anak laki-laki
+break,istirahat
+bring,membawa
+build,membangun
+business,bisnis
+buy,membeli
+call,memanggil
+camera,kamera
+can,bisa
+car,mobil
+card,kartu
+care,peduli
+carry,membawa
+case,kasus
+catch,menangkap
+cause,penyebab
+cell,sel
+center,pusat
+certain,pasti
+chair,kursi
+chance,kesempatan
+change,perubahan
+check,memeriksa
+child,anak
+choice,pilihan
+choose,memilih
+city,kota
+class,kelas
+clear,jelas
+close,menutup
+cold,dingin
+color,warna
+come,datang
+common,umum
+company,perusahaan
+compare,membandingkan
+complete,selesai
+condition,kondisi
+consider,mempertimbangkan
+contain,mengandung
+continue,melanjutkan
+control,mengontrol
+cost,biaya
+could,bisa
+country,negara
+course,kursus
+cover,menutupi
+create,membuat
+culture,budaya
+cut,memotong
+data,data
+day,hari
+dead,mati
+deal,kesepakatan
+death,kematian
+decide,memutuskan
+decision,keputusan
+deep,dalam
+develop,mengembangkan
+die,meninggal
+difference,perbedaan
+different,berbeda
+difficult,sulit
+direction,arah
+discover,menemukan
+discuss,membahas
+disease,penyakit
+do,melakukan
+doctor,dokter
+dog,anjing
+door,pintu
+down,turun
+draw,menggambar
+dream,mimpi
+drive,mengemudi
+drop,menjatuhkan
+drug,obat
+during,selama
+each,setiap
+early,awal
+east,timur
+easy,mudah
+eat,makan
+education,pendidikan
+effect,efek
+effort,usaha
+eight,delapan
+either,salah satu
+else,lain
+end,akhir
+energy,energi
+enjoy,menikmati
+enough,cukup
+enter,masuk
+entire,seluruh
+environment,lingkungan
+especially,terutama
+even,bahkan
+evening,malam
+event,acara
+ever,pernah
+every,setiap
+everyone,semua orang
+everything,semua hal
+example,contoh
+exist,ada
+expect,mengharapkan
+experience,pengalaman
+explain,menjelaskan
+eye,mata
+face,wajah
+fact,fakta
+fail,gagal
+fall,jatuh
+family,keluarga
+far,jauh
+fast,cepat
+father,ayah
+feel,merasakan
+few,sedikit
+field,bidang
+fight,bertarung
+figure,angka
+fill,mengisi
+film,film
+final,akhir
+find,menemukan
+fine,baik
+finish,menyelesaikan
+fire,api
+first,pertama
+fish,ikan
+five,lima
+floor,lantai
+fly,terbang
+focus,fokus
+follow,mengikuti
+food,makanan
+foot,kaki
+for,untuk
+force,kekuatan
+form,bentuk
+forward,maju
+four,empat
+free,bebas
+friend,teman
+from,dari
+front,depan
+full,penuh
+function,fungsi
+future,masa depan
+game,permainan
+garden,kebun
+gas,gas
+general,umum
+generation,genarasi
+get,mendapatkan
+girl,anak perempuan
+give,memberi
+glass,kaca
+go,pergi
+goal,tujuan
+good,baik
+government,pemerintah
+great,besar
+green,hijau
+ground,tanah
+group,kelompok
+grow,tumbuh
+growth,pertumbuhan
+guess,menebak
+gun,senjata
+hair,rambut
+half,setengah
+hand,tangan
+hang,menggantung
+happen,terjadi
+happy,senang
+hard,sulit
+have,memiliki
+he,dia
+head,kepala
+health,kesehatan
+hear,mendengar
+heart,hati
+heat,panas
+heavy,berat
+help,membantu
+her,nya
+here,di sini
+herself,dirinya sendiri
+high,tinggi
+him,dia
+himself,dirinya sendiri
+his,miliknya
+history,sejarah
+hit,memukul
+hold,memegang
+home,rumah
+hope,harapan
+hospital,rumah sakit
+hot,panas
+hotel,hotel
+hour,jam
+house,rumah
+how,bagaimana
+however,namun
+huge,sangat besar
+human,manusia
+hundred,seratus
+husband,suami
+idea,ide
+identify,mengidentifikasi
+if,jika
+image,gambar
+imagine,membayangkan
+impact,dampak
+important,penting
+improve,meningkatkan
+in,di dalam
+include,termasuk
+including,termasuk
+increase,meningkat
+indeed,memang
+indicate,menunjukkan
+individual,individu
+industry,industri
+information,informasi
+inside,di dalam
+instead,sebagai gantinya
+institution,lembaga
+interest,minat
+interesting,menarik
+international,internasional
+interview,wawancara
+into,ke dalam
+investment,investasi
+involve,melibatkan
+issue,isu
+it,itu
+item,item
+its,miliknya
+itself,dirinya sendiri
+job,pekerjaan
+join,bergabung
+just,hanya
+keep,menjaga
+key,kunci
+kid,anak
+kill,membunuh
+kind,jenis
+kitchen,dapur
+know,mengetahui
+knowledge,pengetahuan
+land,tanah
+language,bahasa
+large,besar
+last,terakhir
+late,terlambat
+later,nanti
+laugh,tertawa
+law,hukum
+lawyer,pengacara
+lay,meletakkan
+lead,memimpin
+leader,pemimpin
+learn,belajar
+least,paling sedikit
+leave,meninggalkan
+left,kiri
+leg,kaki
+legal,hukum
+less,lebih sedikit
+let,membiarkan
+letter,surat
+level,tingkat
+life,kehidupan
+light,cahaya
+like,suka
+likely,mungkin
+line,garis
+list,daftar
+listen,mendengarkan
+little,kecil
+live,tinggal
+local,lokal
+long,panjang
+look,melihat
+lose,kehilangan
+loss,kerugian
+lot,banyak
+love,cinta
+low,rendah
+machine,mesin
+magazine,majalah
+main,utama
+maintain,memelihara
+major,utama
+make,membuat
+man,pria
+manage,mengelola
+management,manajemen
+manager,manajer
+many,banyak
+market,pasar
+marriage,pernikahan
+material,bahan
+matter,hal
+may,mungkin
+maybe,mungkin
+me,saya
+mean,berarti
+measure,mengukur
+media,media
+medical,medis
+meet,bertemu
+meeting,pertemuan
+member,anggota
+memory,memori
+mention,menyebutkan
+message,pesan
+method,metode
+middle,tengah
+might,mungkin
+military,militer
+million,juta
+mind,pikiran
+minute,menit
+miss,merindukan
+mission,misi
+model,model
+modern,modern
+moment,saat
+money,uang
+month,bulan
+more,lebih
+morning,pagi
+most,sebagian besar
+mother,ibu
+move,bergerak
+movement,gerakan
+movie,film
+Mr,tuan
+Mrs,nyonya
+much,banyak
+music,musik
+must,harus
+my,milik saya
+myself,diri saya
+name,nama
+nation,bangsa
+national,nasional
+natural,alami
+nature,alam
+near,dekat
+nearly,hampir
+necessary,perlu
+need,membutuhkan
+network,jaringan
+never,tidak pernah
+new,baru
+news,berita
+newspaper,surat kabar
+next,berikutnya
+nice,baik
+night,malam
+no,tidak
+none,tidak ada
+nor,juga tidak
+north,utara
+not,tidak
+note,catatan
+nothing,tidak ada
+notice,memperhatikan
+now,sekarang
+number,nomor
+occur,terjadi
+of,dari
+off,tidak aktif
+offer,menawarkan
+office,kantor
+officer,petugas
+official,resmi
+often,sering
+oil,minyak
+ok,baik
+old,tua
+on,di
+once,sekali
+one,satu
+only,hanya
+open,membuka
+operation,operasi
+opportunity,kesempatan
+option,opsi
+or,atau
+order,urutan
+organization,organisasi
+other,lain
+others,yang lain
+our,milik kita
+out,keluar
+outside,di luar
+over,lebih
+own,milik sendiri
+owner,pemilik
+page,halaman
+pain,rasa sakit
+painting,lukisan
+paper,kertas
+parent,orang tua
+part,bagian
+participant,peserta
+particular,tertentu
+particularly,terutama
+partner,mitra
+party,pesta
+pass,melewati
+past,masa lalu
+patient,pasien
+pattern,pola
+pay,membayar
+peace,damai
+people,orang
+per,setiap
+perform,melakukan
+performance,kinerja
+perhaps,mungkin
+period,periode
+person,orang
+personal,pribadi
+phone,telepon
+physical,fisik
+pick,memilih
+picture,gambar
+piece,potongan
+place,tempat
+plan,rencana
+plant,tanaman
+play,bermain
+player,pemain
+PM,sore
+point,titik
+police,polisi
+policy,kebijakan
+political,politik
+politics,politik
+poor,miskin
+popular,populer
+population,populasi
+position,posisi
+positive,positif
+possible,mungkin
+power,kekuatan
+practice,latihan
+prepare,mempersiapkan
+present,hadir
+president,presiden
+pressure,tekanan
+pretty,cantik
+prevent,mencegah
+price,harga
+private,pribadi
+probably,mungkin
+problem,masalah
+process,proses
+produce,menghasilkan
+product,produk
+production,produksi
+professional,profesional
+professor,profesor
+program,program
+project,proyek
+property,properti
+protect,melindungi
+prove,membuktikan
+provide,menyediakan
+public,publik
+pull,menarik
+purpose,tujuan
+push,mendorong
+put,menaruh
+quality,kualitas
+question,pertanyaan
+quick,cepat
+quickly,dengan cepat
+quite,cukup
+race,ras
+radio,radio
+raise,menaikkan
+range,jangkauan
+rate,tingkat
+rather,agak
+reach,mencapai
+read,membaca
+ready,siap
+real,nyata
+reality,realitas
+realize,menyadari
+really,benar-benar
+reason,alasan
+receive,menerima
+recent,baru-baru ini
+recently,baru-baru ini
+recognize,mengenali
+record,mencatat
+red,merah
+reduce,mengurangi
+reflect,mencerminkan
+region,daerah
+relate,berhubungan
+relationship,hubungan
+remain,tetap
+remember,mengingat
+remove,menghapus
+report,laporan
+represent,mewakili
+require,membutuhkan
+research,penelitian
+resource,sumber daya
+respond,merespon
+response,respons
+responsibility,tanggung jawab
+rest,istirahat
+result,hasil
+return,kembali
+reveal,mengungkapkan
+rich,kaya
+right,benar
+rise,naik
+risk,risiko
+road,jalan
+rock,batu
+role,peran
+room,ruangan
+rule,aturan
+run,berlari
+safe,aman
+same,sama
+save,menyimpan
+say,mengatakan
+scene,adegan
+school,sekolah
+science,ilmu
+scientist,ilmuwan
+score,skor
+sea,laut
+season,musim
+seat,tempat duduk
+second,kedua
+section,bagian
+security,keamanan
+see,melihat
+seek,mencari
+seem,tampak
+sell,menjual
+send,mengirim
+senior,senior
+sense,rasa
+series,seri
+serious,serius
+serve,melayani
+service,layanan
+set,mengatur
+seven,tujuh
+several,beberapa
+shake,mengguncang
+share,berbagi
+she,dia
+shoot,menembak
+short,pendek
+should,seharusnya
+shoulder,bahu
+show,menunjukkan
+side,sisi
+sign,tanda
+significant,penting
+similar,mirip
+simple,sederhana
+simply,hanya
+since,sejak
+sing,bernyanyi
+single,tunggal
+sister,saudara perempuan
+sit,duduk
+site,situs
+situation,situasi
+six,enam
+size,ukuran
+skill,keterampilan
+skin,kulit
+small,kecil
+smile,senyum
+so,jadi
+social,sosial
+society,masyarakat
+soldier,prajurit
+some,beberapa
+somebody,seseorang
+someone,seseorang
+something,sesuatu
+sometimes,kadang-kadang
+son,anak laki-laki
+song,lagu
+soon,segera
+sort,mengurutkan
+sound,suara
+source,sumber
+south,selatan
+space,ruang
+speak,berbicara
+special,khusus
+specific,spesifik
+speech,pidato
+spend,menghabiskan
+sport,olahraga
+spring,musim semi
+staff,staf
+stage,panggung
+stand,berdiri
+standard,standar
+star,bintang
+start,memulai
+state,negara
+statement,pernyataan
+station,stasiun
+stay,tinggal
+step,langkah
+still,masih
+stock,stok
+stop,berhenti
+store,toko
+story,cerita
+strategy,strategi
+street,jalan
+strong,kuat
+structure,struktur
+student,siswa
+study,belajar
+stuff,barang
+style,gaya
+subject,subjek
+success,keberhasilan
+successful,berhasil
+such,seperti itu
+suddenly,tiba-tiba
+suffer,menderita
+suggest,menyarankan
+summer,musim panas
+support,mendukung
+sure,pasti
+surface,permukaan
+system,sistem
+table,meja
+take,mengambil
+talk,berbicara
+task,tugas
+tax,pajak
+teach,mengajar
+team,tim
+technology,teknologi
+television,televisi
+tell,menceritakan
+ten,sepuluh
+tend,cenderung
+term,istilah
+test,tes
+than,dari pada
+thank,terima kasih
+that,itu
+the,yang
+their,milik mereka
+them,mereka
+themselves,diri mereka
+then,lalu
+theory,teori
+there,di sana
+these,ini
+they,mereka
+thing,hal
+think,berpikir
+third,ketiga
+this,ini
+those,itu
+though,meskipun
+thought,pikiran
+thousand,ribu
+threat,ancaman
+three,tiga
+through,melalui
+throughout,sepanjang
+throw,melempar
+thus,dengan demikian
+time,waktu
+to,ke
+today,hari ini
+together,bersama
+tonight,malam ini
+too,juga
+top,atas
+total,total
+tough,sulit
+toward,menuju
+town,kota
+trade,perdagangan
+traditional,tradisional
+training,pelatihan
+travel,perjalanan
+treat,memperlakukan
+treatment,perawatan
+tree,pohon
+trial,percobaan
+trip,perjalanan
+trouble,masalah
+true,benar
+truth,kebenaran
+try,mencoba
+turn,berbalik
+type,tipe
+under,di bawah
+understand,memahami
+unit,unit
+until,sampai
+up,atas
+upon,di atas
+us,kami
+use,menggunakan
+usually,biasanya
+value,nilai
+various,berbagai
+very,sangat
+victim,korban
+view,pandangan
+violence,kekerasan
+visit,mengunjungi
+voice,suara
+vote,memilih
+wait,menunggu
+walk,berjalan
+wall,dinding
+want,ingin
+war,perang
+watch,menonton
+water,air
+way,cara
+we,kita
+weapon,senjata
+wear,memakai
+week,minggu
+weight,berat
+well,baik
+west,barat
+what,apa
+whatever,apa pun
+when,kapan
+where,di mana
+whether,apakah
+which,yang mana
+while,sementara
+white,putih
+who,siapa
+whole,seluruh
+whom,siapa
+whose,milik siapa
+why,mengapa
+wide,luas
+wife,istri
+will,akan
+win,menang
+wind,angin
+window,jendela
+wish,keinginan
+with,dengan
+within,di dalam
+without,tanpa
+woman,wanita
+wonder,bertanya-tanya
+word,kata
+work,bekerja
+worker,pekerja
+world,dunia
+worry,khawatir
+would,akan
+write,menulis
+writer,penulis
+wrong,salah
+yard,halaman
+yeah,ya
+year,tahun
+yes,ya
+yet,belum
+you,kamu
+young,muda
+your,milikmu
+yourself,dirimu sendiri
+ability test,tes kemampuan
+able to,dapat
+abroad,luar negeri
+absence,ketidakhadiran
+absolute,mutlak
+abstract,abstrak
+abuse,penyalahgunaan
+academic,akademik
+access,akses
+accident,kecelakaan
+accompany,menemani
+accomplish,mencapai
+according to,menurut
+accurate,akurat
+accuse,menuduh
+achieve,mencapai
+achievement,pencapaian
+acknowledge,mengakui
+acquire,memperoleh
+across from,di seberang
+act as,bertindak sebagai
+activate,mengaktifkan
+active,aktif
+actor,aktor
+actual,sebenarnya
+adapt,beradaptasi
+addition,tambahan
+additional,tambahan
+adequate,memadai
+adjust,menyesuaikan
+adjustment,penyesuaian
+administrative,administratif
+admire,mengagumi
+adopt,mengadopsi
+advance,kemajuan
+advanced,lanjutan
+advantage,keuntungan
+adventure,petualangan
+advertise,mengiklankan
+advertisement,iklan
+advice,nasihat
+advise,menyarankan
+affair,urusan
+afford,mampu membeli
+afraid,takut
+afternoon,sore
+again and again,berulang kali
+agency work,pekerjaan agensi
+agenda,agenda
+aggressive,agresif
+agreement terms,syarat perjanjian
+agriculture,pertanian
+aid,bantuan
+aim,tujuan
+airplane,pesawat
+alarm,alarm
+album,album
+alcohol,alkohol
+alert,peringatan
+alien,asing
+alive,hidup
+all right,baiklah
+allegation,tuduhan
+alliance,aliansi
+allocate,mengalokasikan
+allowance,tunjangan
+ally,sekutu
+almost done,hampir selesai
+along with,bersama dengan
+already done,sudah selesai
+alternative,alternatif
+although not,meskipun tidak
+altogether,sepenuhnya
+amazing,menakjubkan
+ambition,ambisi
+among others,di antara yang lain
+amount of,jumlah dari
+analysis result,hasil analisis
+ancient,kuno
+anger,kemarahan
+angle,sudut
+angry,marah
+animal life,kehidupan hewan
+annual,tahunan
+another one,yang lain
+answer back,membalas jawaban
+anxiety,kecemasan
+anymore,lagi
+anyway,bagaimanapun
+apart,terpisah
+apartment,apartemen
+apparent,jelas
+appeal,banding
+appearance,penampilan
+application,aplikasi
+appoint,menunjuk
+appointment,janji
+appreciate,menghargai
+approach method,metode pendekatan
+appropriate,tepat
+approval,persetujuan
+approve,menyetujui
+approximately,kira-kira
+architect,arsitek
+archive,arsip
+area code,kode area
+argue with,berdebat dengan
+arise,muncul
+armed,bersenjata
+army,angkatan darat
+around here,sekitar sini
+arrangement,pengaturan
+arrival,kedatangan
+article news,artikel berita
+artificial,buatan
+as a result,sebagai hasil
+as soon as,segera setelah
+ash,abu
+aside,di samping
+ask for,meminta
+aspect,aspek
+assess,menilai
+assessment,penilaian
+asset,aset
+assign,menugaskan
+assignment,tugas
+assist,membantu
+assistance,bantuan
+associate,mengaitkan
+association,asosiasi
+assume that,menganggap bahwa
+assure,memastikan
+at last,akhirnya
+at least,setidaknya
+athlete,atlet
+atmosphere,suasana
+attach,melampirkan
+attempt,percobaan
+attend,menghadiri
+attention span,daya perhatian
+attitude,sikap
+attract,menarik
+attractive,menarik
+audience size,ukuran penonton
+author book,penulis buku
+automatic,otomatis
+available now,tersedia sekarang
+average,rata-rata
+avoid risk,menghindari risiko
+award,penghargaan
+aware,sadar
+awareness,kesadaran
+awesome,keren
+background,latar belakang
+balance,menyeimbangkan
+balanced,seimbang
+barrier,hambatan
+basic,dasar
+basically,pada dasarnya
+basis,landasan
+battle,pertempuran
+be able to,dapat
+become aware,menjadi sadar
+before long,tidak lama
+beginning,awal
+behavior pattern,pola perilaku
+belief,kepercayaan
+belong,memiliki
+beneficial,bermanfaat
+beside,di samping
+besides,selain itu
+best friend,teman terbaik
+better than,lebih baik dari
+beyond that,lebih dari itu
+billion,miliar
+birth,kelahiran
+bitter,pahit
+blackboard,papan tulis
+blame,menyalahkan
+blank,kosong
+block,blok
+blood pressure,tekanan darah
+blow,meniup
+board game,permainan papan
+body language,bahasa tubuh
+bold,berani
+bomb,bom
+bond,ikatan
+border,batas
+borrow,meminjam
+boss,atasan
+bottom,bawah
+boundary,batas
+brain,otak
+branch,cabang
+brand,merek
+brave,berani
+bread,roti
+break down,rusak
+breakfast,sarapan
+breath,napas
+breathe,bernapas
+bridge,jembatan
+brief,ringkas
+bright,terang
+bring up,membesarkan
+broad,luas
+broadcast,siaran
+brother,saudara laki-laki
+budget,anggaran
+build up,membangun
+bullet,peluru
+bunch,sekelompok
+burden,beban
+burn,terbakar
+burst,meledak
+business plan,rencana bisnis
+busy,sibuk
+butter,mentega
+button,tombol
+buyer,pembeli
+cable,kabel
+calculate,menghitung
+call off,membatalkan
+campaign,kampanye
+cancel,membatalkan
+candidate,kandidat
+cap,topi
+capacity,kapasitas
+capital,ibu kota
+capture,menangkap
+career,karier
+careful,hati-hati
+carefully,dengan hati-hati
+carrier,pembawa
+case study,studi kasus
+cash,uang tunai
+cast,melempar
+category,kategori
+ceiling,langit-langit
+celebrate,merayakan
+celebration,perayaan
+celebrity,selebriti
+cell phone,ponsel
+center point,titik pusat
+central,pusat
+century,abad
+ceremony,upacara
+certainly,pasti
+chain,rantai
+chairman,ketua
+challenge,tantangan
+champion,juara
+channel,saluran
+chapter,bab
+character,karakter
+charge,biaya
+charity,amal
+chart,grafik
+cheap,murah
+check out,memeriksa
+cheer,bersorak
+chemical,kimia
+chest,dada
+chief,utama
+childhood,masa kecil
+choice option,opsi pilihan
+circle,lingkaran
+citizen,warga
+civil,sipil
+claim,mengklaim
+classic,klasik
+climate,iklim
+climb,memanjat
+clinic,klinik
+clock,jam
+close down,menutup
+cloth,kain
+cloud,awan
+club,klub
+clue,petunjuk
+coach,pelatih
+coal,batu bara
+coast,pantai
+code,kode
+coffee,kopi
+collapse,runtuh
+collect,mengumpulkan
+collection,koleksi
+college,kampus
+combine,menggabungkan
+comfort,kenyamanan
+comfortable,nyaman
+command,perintah
+comment,komentar
+commercial,komersial
+commit,berkomitmen
+commitment,komitmen
+committee,komite
+common sense,akal sehat
+communicate,berkomunikasi
+communication,komunikasi
+community,komunitas
+company profile,profil perusahaan
+compare with,membandingkan dengan
+competition,kompetisi
+complain,mengeluh
+complete task,menyelesaikan tugas
+complex,kompleks
+complicated,rumit
+component,komponen
+compose,menyusun
+composition,komposisi
+compound,senyawa
+comprehensive,menyeluruh
+computer system,sistem komputer
+concentrate,berkonsentrasi
+concept,konsep
+concern,kekhawatiran
+concert,konser
+conclude,menyimpulkan
+conclusion,kesimpulan
+condition state,kondisi keadaan
+conference,konferensi
+confidence,kepercayaan diri
+confirm,mengonfirmasi
+conflict,konflik
+confuse,membingungkan
+confused,bingung
+connection,koneksi
+conscious,sadar
+considerable,signifikan
+consistent,konsisten
+constant,konstan
+construct,membangun
+construction,konstruksi
+consume,mengonsumsi
+consumer,konsumen
+contact,kontak
+contain data,mengandung data
+content,isi
+context,konteks
+continue work,melanjutkan kerja
+contract,kontrak
+contrast,kontras
+contribute,berkontribusi
+contribution,kontribusi
+control system,sistem kontrol
+convert,mengubah
+convince,meyakinkan
+cook,memasak
+cool,keran
+cooperate,bekerja sama
+copy,menyalin
+core,inti
+corner,sudut
+correct,benar
+costly,mahal
+cotton,kapas
+council,dewan
+count,menghitung
+counter,meja
+couple,pasangan
+course study,kursus studi
+court,pengadilan
+cover area,menutupi area
+crash,tabrakan
+create system,membuat sistem
+creative,kreatif
+credit,kredit
+crew,kru
+crime,kejahatan
+crisis,krisis
+critic,kritikus
+critical,kritis
+crop,tanaman
+cross,menyilang
+crowd,kerumunan
+crucial,krusial
+culture value,nilai budaya
+cup,cangkir
+curious,penasaran
+current,arus
+currently,saat ini
+custom,kustom
+customer,pelanggan
+cycle,siklus

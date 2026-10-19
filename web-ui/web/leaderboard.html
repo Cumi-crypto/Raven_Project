@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lexify Papan Peringkat — Bersaing dengan pelajar lain di seluruh dunia atau daerahmu">
+  <title>Lexify — Papan Peringkat</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .leaderboard-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .scope-tabs {
+      display: flex;
+      gap: 8px;
+    }
+    .scope-tab {
+      padding: 8px 16px;
+      border: 1px solid var(--border-glass);
+      background: var(--bg-card);
+      color: var(--text-secondary);
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .scope-tab.active {
+      background: var(--accent-orange);
+      color: white;
+      border-color: var(--accent-orange);
+    }
+    
+    .rank-row {
+      display: flex;
+      align-items: center;
+      padding: 16px;
+      border-bottom: 1px solid var(--border-glass);
+      transition: background 0.2s;
+    }
+    .rank-row:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .rank-row.current-user {
+      background: rgba(255, 107, 53, 0.1);
+      border-left: 4px solid var(--accent-orange);
+    }
+    
+    .rank-number {
+      font-size: 1.5rem;
+      font-weight: 800;
+      width: 50px;
+      text-align: center;
+      color: var(--text-secondary);
+    }
+    .rank-row[data-rank="1"] .rank-number { color: #F59E0B; text-shadow: 0 0 10px rgba(245, 158, 11, 0.4); }
+    .rank-row[data-rank="2"] .rank-number { color: #9CA3AF; text-shadow: 0 0 10px rgba(156, 163, 175, 0.4); }
+    .rank-row[data-rank="3"] .rank-number { color: #D97706; text-shadow: 0 0 10px rgba(217, 119, 6, 0.4); }
+    
+    .rank-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--border-glass);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      margin-right: 16px;
+    }
+    
+    .rank-details {
+      flex: 1;
+    }
+    .rank-name {
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+    }
+    .rank-location {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    
+    .rank-stats {
+      text-align: right;
+    }
+    .rank-xp {
+      font-weight: 800;
+      color: var(--accent-orange);
+      font-size: 1.2rem;
+    }
+    .rank-level {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="particles-canvas"></canvas>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <!-- (Navbar content will be injected by app.js) -->
+</nav>
+
+<!-- MAIN -->
+<div class="main-content">
+  <div class="container">
+    
+    <!-- HEADER -->
+    <div class="animate-in" style="text-align:center; padding-top:20px; padding-bottom:30px;">
+      <h1 style="font-size:2.5rem; margin-bottom:12px;">🏆 Papan Peringkat</h1>
+      <p style="color:var(--text-secondary); max-width:500px; margin:0 auto;">
+        Bersaing dengan pelajar di mana saja! Naik peringkat dengan mengumpulkan XP dari kuis dan latihan mengetik.
+      </p>
+    </div>
+    
+    <!-- LEADERBOARD CARD -->
+    <div class="card card-static animate-in animate-in-delay-1">
+      
+      <div class="leaderboard-header">
+        <h2 id="leaderboard-title">Pelajar Terbaik</h2>
+        
+        <div class="scope-tabs">
+          <button class="scope-tab" data-scope="city" id="tab-city">Kota</button>
+          <button class="scope-tab" data-scope="province" id="tab-province">Provinsi</button>
+          <button class="scope-tab active" data-scope="country" id="tab-country">Negara</button>
+        </div>
+      </div>
+      
+      <!-- DATA LIST -->
+      <div id="leaderboard-list">
+        <div style="text-align:center; padding:40px;">
+          <div style="font-size:2rem; animation:pulse 1s infinite;">⌛</div>
+          <p style="color:var(--text-secondary); margin-top:12px;">Memuat peringkat...</p>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+<script src="js/leaderboard.js"></script>
+
+</body>
+</html>

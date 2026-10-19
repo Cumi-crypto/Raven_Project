@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lexify Latihan Mengetik — Tingkatkan kecepatan dan akurasi mengetik Bahasa Inggrismu">
+  <title>Lexify — Latihan Mengetik</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<canvas id="particles-canvas"></canvas>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html" class="nav-brand">
+    <img src="assets/raven.png" alt="Lexify"> Lexify
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">🏠 Home</a></li>
+    <li><a href="dictionary.html">📖 Dictionary</a></li>
+    <li><a href="quiz.html">🎯 Quiz</a></li>
+    <li><a href="typing.html">⌨️ Typing</a></li>
+    <li><a href="profile.html">👤 Profile</a></li>
+  </ul>
+  <div class="nav-stats">
+    <div class="nav-stat">🔥 <span class="streak-display">0</span></div>
+    <div class="nav-stat">⭐ <span class="xp-display">0</span></div>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+  <div class="container">
+    
+    <div class="typing-wrapper">
+      <h1 class="animate-in" style="font-size:1.8rem; margin-bottom:8px;">⌨️ Latihan Mengetik</h1>
+      <p class="animate-in" style="color:var(--text-secondary); margin-bottom:24px;">
+        Uji kecepatan dan akurasi mengetikmu dalam Bahasa Inggris. Klik kolom untuk mulai!
+        <br><br>
+        <span style="color:var(--accent-orange); font-size:0.85rem;">⚠️ Fitur ini paling optimal digunakan di perangkat desktop/laptop dengan keyboard fisik.</span>
+      </p>
+      <!-- SETTINGS & STATS HEADER -->
+      <div class="card card-static animate-in animate-in-delay-1" style="margin-bottom:20px; padding:16px 24px;">
+        <div class="typing-header">
+          <div class="typing-settings">
+            <span style="color:var(--text-secondary); font-size:0.9rem; font-weight:600;">Waktu:</span>
+            <button class="typing-setting-btn active" data-time="15">15s</button>
+            <button class="typing-setting-btn" data-time="30">30s</button>
+            <span style="color:var(--border-glass); margin:0 8px;">|</span>
+            <button class="sound-toggle-btn" id="sound-toggle" title="Toggle Keyboard Clicks">🔊</button>
+          </div>
+          
+          <div class="typing-stats-panel">
+            <div class="typing-stat-item">⏱️ <span id="time-left">15</span>s</div>
+            <div class="typing-stat-item">🚀 <span id="wpm-live">0</span> WPM</div>
+            <div class="typing-stat-item">🎯 <span id="acc-live">100</span>%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TYPING BOARD -->
+      <div class="typing-words-container animate-in animate-in-delay-2" id="words-container">
+        <div class="typing-focus-prompt" id="focus-prompt">
+          ⌨️ Klik di sini untuk fokus dan mulai mengetik...
+        </div>
+        <div class="typing-caret" id="caret"></div>
+        <div class="typing-words" id="words-list">
+          <!-- Dynamic words injected here -->
+        </div>
+      </div>
+
+      <!-- RESTART BUTTON -->
+      <div style="text-align:center;" class="animate-in animate-in-delay-2">
+        <button class="btn btn-outline" id="restart-btn" style="border-radius:var(--radius-full); padding:10px 24px;">
+          🔄 Mulai Ulang
+        </button>
+      </div>
+
+      <!-- RESULT POPUP / CARD (HIDDEN BY DEFAULT) -->
+      <div id="result-card" style="display:none; margin-top:24px;">
+        <div class="card card-static end-screen animate-in" style="max-width:550px; margin:0 auto; padding:32px;">
+          <h2 style="font-size:1.8rem; margin-bottom:8px;">Latihan Selesai! 🎉</h2>
+          <p style="color:var(--text-secondary); font-size:0.95rem; margin-bottom:24px;">Berikut performa kecepatan mengetikmu:</p>
+          
+          <div class="stats-grid" style="grid-template-columns: repeat(3, 1fr); gap:12px; margin-bottom:24px;">
+            <div class="card card-static" style="padding:16px 8px; text-align:center;">
+              <div style="font-size:1.8rem; font-weight:800; color:var(--accent-orange);" id="result-wpm">0</div>
+              <div style="font-size:0.75rem; color:var(--text-secondary); margin-top:4px;">KPM (Kecepatan)</div>
+            </div>
+            <div class="card card-static" style="padding:16px 8px; text-align:center;">
+              <div style="font-size:1.8rem; font-weight:800; color:var(--accent-green);" id="result-acc">100%</div>
+              <div style="font-size:0.75rem; color:var(--text-secondary); margin-top:4px;">Akurasi</div>
+            </div>
+            <div class="card card-static" style="padding:16px 8px; text-align:center;">
+              <div style="font-size:1.8rem; font-weight:800; color:var(--accent-gold);" id="result-xp">+0 XP</div>
+              <div style="font-size:0.75rem; color:var(--text-secondary); margin-top:4px;">XP Diperoleh</div>
+            </div>
+          </div>
+
+          <div style="color:var(--text-secondary); font-size:0.85rem; line-height:1.6; margin-bottom:24px; text-align:left; background:rgba(255,255,255,0.02); padding:16px; border-radius:var(--radius-md); border:1px solid var(--border-glass);">
+            <div>Karakter benar: <span style="color:white; font-weight:600;" id="result-correct">0</span></div>
+            <div>Kesalahan: <span style="color:var(--accent-red); font-weight:600;" id="result-errors">0</span></div>
+            <div style="margin-top:6px; font-size:0.75rem; color:var(--text-muted);">Rumus: KPM = (karakter benar / 5) / waktu berlalu.</div>
+          </div>
+
+          <div style="display:flex; gap:12px; justify-content:center;">
+            <button class="btn btn-primary" id="btn-try-again">Coba Lagi 🔄</button>
+            <a href="index.html" class="btn btn-outline">Beranda 🏠</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+<script src="js/typing.js"></script>
+
+</body>
+</html>
